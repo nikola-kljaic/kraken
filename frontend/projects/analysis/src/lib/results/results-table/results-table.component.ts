@@ -23,7 +23,7 @@ import {StorageNode} from 'projects/storage/src/lib/entities/storage-node';
 library.add(faCircleNotch, faQuestion, faCheckSquare, faExclamationTriangle, faExclamationCircle, faChartLine, faFileInvoice, faFileImport);
 
 @Component({
-  selector: 'lib-results-list',
+  selector: 'lib-results-table',
   templateUrl: './results-table.component.html',
   styleUrls: ['./results-table.component.scss'],
   providers: [GatlingResultService]
