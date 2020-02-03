@@ -203,4 +203,18 @@ export class StorageTreeControlService extends FlatTreeControl<StorageNode> impl
     _.filter(this._selection.selected, predicate).forEach((node: StorageNode) => this._selection.deselect(node));
   }
 
+  public isVisible(node: StorageNode, index: number): boolean {
+    const parent = this.dataSource.parentNode(node);
+    const parentIndex = _.indexOf(this.dataSource.data, parent);
+    if (parentIndex < index) {
+      return false;
+    } else if (parent.path === this.rootNode.path) {
+      return true;
+    } else if (!this.isExpanded(parent)) {
+      return this.isVisible(parent, parentIndex);
+    } else {
+      return true;
+    }
+  }
+
 }
