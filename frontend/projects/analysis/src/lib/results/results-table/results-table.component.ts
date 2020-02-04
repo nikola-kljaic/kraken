@@ -16,7 +16,6 @@ import {faFileInvoice} from '@fortawesome/free-solid-svg-icons/faFileInvoice';
 import {ResultsTableService} from 'projects/analysis/src/lib/results/results-table/results-table.service';
 import {faFileImport} from '@fortawesome/free-solid-svg-icons/faFileImport';
 import {faCircleNotch} from '@fortawesome/free-solid-svg-icons/faCircleNotch';
-import {DescriptionInputComponent} from 'projects/gatling/src/app/simulations/simulation-dialogs/description-input/description-input.component';
 import {ContextualMenuComponent} from 'projects/tree/src/lib/contextual-menu/contextual-menu.component';
 import {StorageNode} from 'projects/storage/src/lib/entities/storage-node';
 
@@ -80,5 +79,4 @@ export class ResultsTableComponent implements OnInit {
       this.menu.open(event);
     });
   }
-
 }
